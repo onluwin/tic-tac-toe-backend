@@ -3,7 +3,7 @@ const createNewRoom = () => {
     roomId: getRandomRoomId(),
     board: Array(9).fill(null),
     isXNext: true,
-    players: 0,
+    players: 1,
   };
   return result;
 };

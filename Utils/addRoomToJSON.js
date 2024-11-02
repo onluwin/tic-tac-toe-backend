@@ -14,16 +14,16 @@ const addRoomToJSON = (newRoom) => {
     console.log("jsonData", jsonData);
 
     // Добавляем новый объект в массив rooms
-    // jsonData.rooms.push(newRoom);
+    jsonData.push(newRoom);
 
-    // // Записываем обновленный массив обратно в файл
-    // fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), (err) => {
-    //   if (err) {
-    //     console.error("Ошибка записи файла:", err);
-    //     return;
-    //   }
-    //   console.log("Новый объект успешно добавлен!");
-    // });
+    // Записываем обновленный массив обратно в файл
+    fs.writeFile(filePath, JSON.stringify(jsonData, null, 2), (err) => {
+      if (err) {
+        console.error("Ошибка записи файла:", err);
+        return;
+      }
+      console.log("Новый объект успешно добавлен!");
+    });
   });
 };
 
